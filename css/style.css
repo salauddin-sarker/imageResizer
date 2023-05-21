@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    align-items: center;
+    background: #927dfc;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+.wrapper{
+    background-color: #fff;
+    border-radius: 9px;
+    height: 288px;
+    padding: 30px;
+    transition: height 0.2s ease;
+    width: 450px;
+}
+.wrapper .upload_box{
+    align-items: center;
+    border: 2px dashed #afafaf;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 225px;
+}
+.wrapper.active{
+    height: 537px;
+}
+.wrapper.active .upload_box{
+    border: none;
+}
+.wrapper.active .upload_box p{
+    display: none;
+}
+.wrapper.active .upload_box img{
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.upload_box p{
+    font-size: 16px;
+    margin-top: 20px;
+}
+.wrapper .content{
+    margin-top: 28px;
+    opacity: 0;
+    pointer-events: none;
+}
+.wrapper.wrapper.active .content{
+    opacity: 1;
+    pointer-events: auto;
+    transition:  opacity 0.5s 0.05s ease;
+}
+.content .row{
+    display: flex;
+    justify-content: space-between;
+}
+.content .row .column{
+    width: calc(100% / 2 - 15px);
+}
+.row .column label{
+    font-size: 16px;
+}
+.size .column input{
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    height: 49px;
+    margin-top: 7px;
+    outline: none;
+    padding: 0 15px;
+    width: 100%;
+}
+.size .column input:focus{
+    border: 2px solid #927dfc;
+    padding: 0 14px;
+}
+.content .checkboxes{
+    margin-top: 20px;
+}
+.checkboxes .column{
+    align-items: center;
+    display: flex;
+}
+.checkboxes .column input{
+    accent-color: #927dfc;
+    height: 17px;
+    margin-right: 9px;
+    width: 17px;
+}
+.content .download_btn{
+    border: none;
+    border-radius: 5px;
+    background-color: #927dfc;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 30px 10px 0px 0px;
+    outline: none;
+    padding: 15px 0;
+    text-transform: uppercase;
+    width: 100%;
+}
